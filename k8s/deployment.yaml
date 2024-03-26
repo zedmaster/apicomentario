@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        app: apicomentario
+        app: pyserver
     spec:
       containers:
       - name: pyserver
