@@ -5,4 +5,4 @@ COPY app/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 EXPOSE 8000
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app.api:app"]
+CMD ["gunicorn", "--log-level debug", "0.0.0.0:8000", "app.api:app"]
