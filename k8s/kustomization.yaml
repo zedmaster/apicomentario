@@ -8,4 +8,4 @@ resources:
 images:
 - name: pyserver
   newName: uzedmaster/apicomentario
-  newTag: 2f10604dc754d0c0439749b0e558239622b0dbb7
+  newTag: d07411c86055793fdd99705d78389b4ea4a742e6
