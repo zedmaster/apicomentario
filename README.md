@@ -63,3 +63,4 @@ Use ferramentas e bibliotecas open source, mas documente as decisões e porquês
 Automatize o máximo possível;
 
 Em caso de dúvidas, pergunte.
+
