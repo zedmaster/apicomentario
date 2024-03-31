@@ -1,0 +1,12 @@
+clusterName: "elasticsearch"
+nodeGroup: "master"
+
+master:
+  replicas: 3
+  heapSize: "512m"
+
+data:
+  replicas: 2
+  heapSize: "512m"
+  persistence:
+    enabled: true

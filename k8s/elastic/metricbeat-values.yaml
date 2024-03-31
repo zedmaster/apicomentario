@@ -1,0 +1,31 @@
+metricbeat.modules:
+- module: system
+  enabled: true
+  metricsets: ["cpu", "load", "core", "diskio", "memory", "network", "process", "socket"]
+  period: 10s
+
+- module: kubernetes
+  enabled: true
+  metricsets: ["node", "system", "pod", "container"]
+  period: 10s
+  hosts: ["kube-state-metrics:8080"]
+
+- module: log
+  enabled: true
+  metricsets: ["log"]
+  period: 10s
+  processors:
+    - add_kubernetes_metadata:
+        in_cluster: true
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch-master:9200"]
+  username: "kibanaadmin"
+  password: "kibanabana"
+
+setup.kibana:
+  host: "kibana-kibana:5601"
+  username: "kibanaadmin"
+  password: "kibanabana"
+
+setup.dashboards.enabled: true
